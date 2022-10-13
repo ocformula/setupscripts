@@ -1,0 +1,5 @@
+
+
+# https://github.com/maharmstone/btrfs
+
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CI\Policy" /v UpgradedSystem /d 1 /t REG_DWORD /f
