@@ -1,6 +1,6 @@
 #!/bin/bash
 
-snap remove firefox
+sudo snap remove firefox
 
 add-apt-repository -y ppa:mozillateam/firefox-next
 
