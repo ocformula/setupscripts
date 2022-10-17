@@ -23,6 +23,4 @@ sudo apt install amdgpu-install
 
 sudo amdgpu-install --usecase=rocm --no-dkms
 
-wget https://raw.githubusercontent.com/ROCmSoftwarePlatform/MIOpen/develop/utils/install_precompiled_kernels.sh && chmod +x install_precompiled_kernels.sh && ./install_precompiled_kernels.sh
-
 rocminfo
