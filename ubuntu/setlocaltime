@@ -1,1 +1,3 @@
+https://wiki.archlinux.org/title/System_time#UTC_in_Microsoft_Windows
+
 timedatectl set-local-rtc 1
