@@ -24,3 +24,22 @@ sudo apt upgrade
 wget https://repo.radeon.com/amdgpu-install/5.3.2/ubuntu/jammy/amdgpu-install_5.3.50302-1_all.deb
 
 sudo apt install  ./amdgpu-install_5.3.50302-1_all.deb
+
+
+sudo amdgpu-install --rocmrelease=5.3.2 --usecase=dkms,graphics,rocm,lrt,hip,hiplibsdk
+
+sudo reboot
+
+sudo apt install git python3.10 python3.10-venv
+
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui
+
+cd stable-diffusion-webui
+
+python3.10 -m venv venv
+
+source venv/bin/activate
+
+python -m pip install --upgrade pip wheel
+
+AMDGPU_TARGETS="gfx1010" HSA_OVERRIDE_GFX_VERSION=10.3.0 TORCH_COMMAND='pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/rocm5.1.1' python launch.py
