@@ -1,0 +1,19 @@
+worker_processes  4;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    sendfile      on;
+    aio           on;
+    tcp_nopush    on;
+    directio      8m;
+
+    access_log    syslog:server=unix:/dev/log;
+
+    include /etc/nginx/conf.d/*.conf;
+}
